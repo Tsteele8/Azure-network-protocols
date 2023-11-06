@@ -51,10 +51,25 @@ Remote Desktop into DC-1 via windows firewall security settings --> Advanced set
 </p>
 <br />
 
+![image](https://github.com/Tsteele8/Azure-network-protocols/assets/149441408/9a6254fe-8178-4cb7-bbba-c7240b656841)
+
+
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Ensure communication between both VMs via perpetual ping using cmd:ping -t (Ip Address).
 </p>
 <br />
+
+![image](https://github.com/Tsteele8/Azure-network-protocols/assets/149441408/8739aa3e-474f-450e-bbc7-66a1cf38d828)
+
+Use Remote Desktop in the system settings to allow domain users access for all non-admin users on Client-1 VM under "user accounts" --> "select users that can remotely access this PC" --> click "add" and type in "domain users".
+
+![image](https://github.com/Tsteele8/Azure-network-protocols/assets/149441408/e69d177e-c06b-45a2-afa9-e5260ed08552)
+
+Use a random account generating script to create at least 100 users for this lab. Upload script via "Powershell ISE" (run as administrator) to Client-1. This will create 100 new users with random names. This is done to simulate employees within the company.
+
+![image](https://github.com/Tsteele8/Azure-network-protocols/assets/149441408/26673b40-12d8-40ba-9e15-626425e4bcb1)
+
+Log into any newly generated user account on Client-1 VM. The login attempt with the user's name & generic password should be successful. That is the conclusion of this lab.
+
+
+
